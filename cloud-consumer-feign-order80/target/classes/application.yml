@@ -1,0 +1,22 @@
+server:
+  port: 80
+
+
+Eureka:
+ client:
+   #是否将自己注册到注册中心, 默认true
+    register-with-eureka: true
+
+    service-url:
+#      defaultZone: http://localhost:7001/eureka  #单机版
+       defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
+
+ribbon:
+  # 建立连接所用时间
+  ReadTimeout: 5000
+  # 建立连接后读取可用资源所用的时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    com.gudonghei.springcloud.service.PaymentFeignService: debug
