@@ -8,9 +8,9 @@ spring:
     config:
       server:
         git:
-          url:
+          uri: git@github.com:gudonghei/springcloud-config.git
           search-paths:
-            springcloid config
+            springcloud-config
       label: master
 
 Eureka:
